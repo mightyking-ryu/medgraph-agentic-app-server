@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Health Survey</title>
+    <link rel="stylesheet" href="/assets/css/home.css">
+</head>
+<body>
+
+    <div class="container">
+        <img src="/assets/images/p1.jpg" alt="Profile Image" class="profile-img">
+        <h1>Health Survey</h1>
+
+        <div class="progress-bar">
+            <div class="progress" id="progress"></div>
+        </div>
+
+        <form id="survey-form">
+            
+            <!-- Start Page -->
+            <div class="step active">
+                <h2>Welcome to the Health Survey</h2>
+                <p>This survey helps assess your health conditions and lifestyle. Please answer honestly.</p>
+                <button type="button" class="next-btn">Start</button>
+            </div>
+            <img src="/assets/images/p5.png" class="left-image" alt="Side Image">
+            <img src="/assets/images/p3.png" class="right-image" alt="Side Image">
+            
+            <!-- Step 1: Physical Information -->
+            <div class="step active">
+                <h2>1. Physical Information and Weight Changes</h2>
+                <label>Height (optional): <input type="number" name="height" placeholder="cm"></label>
+                <label>Weight (optional): <input type="number" name="weight" placeholder="kg"></label>
+                <p>Have you experienced a weight change of 2–3 kg or more within the last 6 months?</p>
+                <label><input type="radio" name="weight_change" value="gained"> Yes, gained weight</label>
+                <label><input type="radio" name="weight_change" value="lost"> Yes, lost weight</label>
+                <label><input type="radio" name="weight_change" value="no_change"> No significant change</label>
+                <button type="button" class="next-btn">Next</button>
+            </div>
+
+            <!-- Step 2: Chronic Disease Status -->
+            <div class="step">
+                <h2>2. Chronic Disease Status</h2>
+                <p>Please check any chronic diseases you have been diagnosed with or treated for:</p>
+                <label><input type="checkbox" name="disease" value="hypertension"> Hypertension (High Blood Pressure)</label>
+                <label><input type="checkbox" name="disease" value="diabetes"> Diabetes</label>
+                <label><input type="checkbox" name="disease" value="cholesterol"> Hyperlipidemia (High Cholesterol)</label>
+                <label><input type="checkbox" name="disease" value="asthma"> Bronchial Asthma</label>
+                <label><input type="checkbox" name="disease" value="rhinitis"> Allergic Rhinitis</label>
+                <label><input type="checkbox" name="disease" value="dermatitis"> Atopic Dermatitis</label>
+                <label><input type="checkbox" name="disease" value="hypothyroidism"> Hypothyroidism</label>
+                <label><input type="checkbox" name="disease" value="urticaria"> Chronic Urticaria</label>
+                <label><input type="checkbox" name="disease" value="autoimmune"> Autoimmune Disease</label>
+                <label><input type="checkbox" name="disease" value="other"> Other (please specify) <input type="text" name="other_disease"></label>
+                <label><input type="checkbox" name="disease" value="none"> None</label>
+                <button type="button" class="prev-btn">Previous</button>
+                <button type="button" class="next-btn">Next</button>
+            </div>
+
+            <!-- Step 3: Food Allergy -->
+            <div class="step">
+                <h2>3. Food Allergy</h2>
+                <label><input type="radio" name="food_allergy" value="yes"> Yes (Please specify) <input type="text" name="food_allergy_details"></label>
+                <label><input type="radio" name="food_allergy" value="no"> No</label>
+                <button type="button" class="prev-btn">Previous</button>
+                <button type="button" class="next-btn">Next</button>
+            </div>
+
+            <!-- Step 4: Drug Allergy -->
+            <div class="step">
+                <h2>4. Drug Allergy</h2>
+                <label><input type="radio" name="drug_allergy" value="yes"> Yes (Please specify) <input type="text" name="drug_allergy_details"></label>
+                <label><input type="radio" name="drug_allergy" value="no"> No</label>
+                <button type="button" class="prev-btn">Previous</button>
+                <button type="button" class="next-btn">Next</button>
+            </div>
+
+            <!-- Step 5: Long-Term Medication Use -->
+            <div class="step">
+                <h2>5. Long-Term Medication Use</h2>
+                <label><input type="radio" name="long_term_med" value="yes"> Yes (Medication name(s)) <input type="text" name="med_details"></label>
+                <label><input type="radio" name="long_term_med" value="no"> No</label>
+                <button type="button" class="prev-btn">Previous</button>
+                <button type="button" class="next-btn">Next</button>
+            </div>
+
+            <!-- Step 6: Family History -->
+            <div class="step">
+                <h2>6. Family History</h2>
+                <label><input type="radio" name="family_history" value="yes"> Yes (Please specify) <input type="text" name="family_disease_details"></label>
+                <label><input type="radio" name="family_history" value="no"> No</label>
+                <button type="button" class="prev-btn">Previous</button>
+                <button type="button" class="next-btn">Next</button>
+            </div>
+
+            <!-- Step 7: Smoking and Alcohol Consumption -->
+            <div class="step">
+                <h2>7. Smoking and Alcohol Consumption</h2>
+                <p>Smoking Status:</p>
+                <label><input type="radio" name="smoking" value="current"> Current Smoker</label>
+                <label><input type="radio" name="smoking" value="former"> Former Smoker (Quit for <input type="text" name="quit_time"> months/years)</label>
+                <label><input type="radio" name="smoking" value="never"> Never Smoked</label>
+                <p>Alcohol Use Frequency:</p>
+                <label><input type="radio" name="alcohol" value="never"> Never</label>
+                <label><input type="radio" name="alcohol" value="occasionally"> Occasionally (Less than once a month)</label>
+                <label><input type="radio" name="alcohol" value="weekly"> Once a week</label>
+                <label><input type="radio" name="alcohol" value="frequent"> 2–3 times a week or more</label>
+                <label><input type="radio" name="alcohol" value="daily"> Almost daily</label>
+                <button type="button" class="prev-btn">Previous</button>
+                <button type="button" class="next-btn">Next</button>
+            </div>
+
+            <!-- Step 8: Recent Sleep Pattern -->
+            <div class="step">
+                <h2>8. Recent Sleep Pattern</h2>
+                <p>On average, how many hours do you sleep per day?</p>
+                <label><input type="radio" name="sleep_hours" value="less4"> Less than 4 hours</label>
+                <label><input type="radio" name="sleep_hours" value="5-6"> 5–6 hours</label>
+                <label><input type="radio" name="sleep_hours" value="7-8"> 7–8 hours</label>
+                <label><input type="radio" name="sleep_hours" value="more9"> More than 9 hours</label>
+                <button type="button" class="prev-btn">Previous</button>
+                <button type="submit">Submit</button>
+            </div>
+
+            <!-- Final Page (Hidden Initially) -->
+            <div class="final-page" style="display: none;">
+                <h1>It's time 
+                    to chat with AI!!</h1>
+                <p>Based on the survey, AI will help me with my customized health analysis!!</p>
+                <p>Redirecting in <span id="countdown">5</span> seconds...</p>
+                <img src="/assets/images/loading.gif" alt="Chat Animation" class="chat-gif">
+                <p>Please wait a moment</p>
+            </div>
+            
+
+        </form>
+    </div>
+
+    <script src="/assets/js/home.js"></script>
+</body>
+</html>
+

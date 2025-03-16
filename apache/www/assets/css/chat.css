@@ -1,0 +1,124 @@
+@charset "UTF-8";
+
+body {
+    font-family: Arial, sans-serif;
+    background: url('/assets/images/p2.jpg') no-repeat center center fixed;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    position: relative;
+}
+
+.left-image {
+    position: absolute;
+    left: 80px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 200px;  /* Same size as .profile-img */
+    height: 200px;
+    border-radius: 50%; /* Circular like profile image */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    object-fit: cover; /* Prevents stretching */
+}
+
+.right-image {
+    position: absolute;
+    right: 80px;
+    top: 68%;
+    transform: translateY(-50%);
+    width: 200px;  /* Same size as .profile-img */
+    height: 200px;
+    border-radius: 10%;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    object-fit: cover; /* Prevents stretching */
+}
+
+.chat-container {
+    width: 90%;
+    max-width: 400px;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: column;
+}
+
+.chat-box {
+    height: 300px;
+    overflow-y: auto;
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 5px;
+    background: #fff;
+    position: relative; 
+}
+
+.placeholder-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: rgba(0, 0, 0, 0.4); /* Light gray color */
+    font-size: 16px;
+    pointer-events: none; /* Prevent user interaction */
+}
+
+.user-message, .ai-message {
+    padding: 8px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    width: fit-content;
+    max-width: 80%;
+}
+
+.user-message {
+    background: #d1e7fd;
+    align-self: flex-end;
+}
+
+.ai-message {
+    background: #e5e5e5;
+    align-self: flex-start;
+}
+
+/* Align user message to bottom-right */
+.user-message {
+    background: #d1e7fd;
+    align-self: flex-end;
+    text-align: right;
+    margin-left: auto;
+}
+
+/* Typing GIF styling */
+.typing-gif {
+    width: 40px;
+    height: 20px;
+    margin: 5px 0;
+    align-self: flex-start;
+}
+
+.input-container {
+    display: flex;
+    margin-top: 10px;
+}
+
+input {
+    flex: 1;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    padding: 8px 12px;
+    margin-left: 5px;
+    border: none;
+    background: #007bff;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}

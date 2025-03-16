@@ -1,0 +1,197 @@
+@charset "UTF-8";
+
+/* General Styles */
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    background-image: url('/assets/images/p2.jpg'); /* Replace with your image */
+    background-size: cover;
+    background-position: left center;
+    background-repeat: no-repeat;
+    font-family: Arial, sans-serif;
+}
+
+/* Start Page */
+.start-page {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 50%;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+.start-page h1 {
+    font-size: 28px;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.start-page button {
+    background-color: #007BFF;
+    padding: 12px 20px;
+    font-size: 18px;
+    border-radius: 8px;
+}
+
+.start-page button:hover {
+    background-color: #0056b3;
+}
+
+/* Left Image */
+.left-image {
+    position: absolute;
+    left: 80px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 200px;  /* Same size as .profile-img */
+    height: 200px;
+    border-radius: 50%; /* Circular like profile image */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    object-fit: cover; /* Prevents stretching */
+}
+
+/* Right Image */
+.right-image {
+    position: absolute;
+    right: 80px;
+    top: 68%;
+    transform: translateY(-50%);
+    width: 200px;  /* Same size as .profile-img */
+    height: 200px;
+    border-radius: 10%;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    object-fit: cover; /* Prevents stretching */
+}
+/* TopRight Image */
+/* .topright-image {
+    position: absolute;
+    right: 80px;
+    top: 18%;
+    transform: translateY(-50%);
+    width: 200px;
+    height: 200px;
+    border-radius: 10%;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    object-fit: cover;
+} */
+
+/* Container Box */
+.container {
+    width: 50%;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+/* Profile Image */
+.profile-img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+/* Progress Bar */
+.progress-bar {
+    width: 100%;
+    background-color: #e0e0e0;
+    border-radius: 5px;
+    height: 10px;
+    margin-bottom: 20px;
+}
+
+.progress {
+    height: 100%;
+    width: 0%;
+    background-color: #4caf50;
+    border-radius: 5px;
+    transition: width 0.3s ease-in-out;
+}
+
+/* Form Styling */
+.step {
+    display: none;
+    text-align: left;
+}
+
+.step.active {
+    display: block;
+}
+
+h2 {
+    font-size: 18px;
+    color: #555;
+}
+
+label {
+    display: block;
+    margin: 10px 0;
+    font-size: 16px;
+}
+
+input[type="text"],
+input[type="number"] {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Buttons */
+button {
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    font-size: 16px;
+    margin: 10px 5px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+.prev-btn {
+    background-color: #888;
+}
+
+.prev-btn:hover {
+    background-color: #777;
+}
+
+.final-page {
+    display: none; /* Hidden initially */
+    text-align: center;
+}
+
+.final-page h1 {
+    font-size: 24px;
+    color: #333;
+}
+
+.final-page p {
+    font-size: 18px;
+    color: #666;
+    margin-top: 10px;
+}
+
+
+.chat-gif {
+    width: 150px;  /* Adjust size as needed */
+    height: auto;
+    margin-top: 10px;
+}

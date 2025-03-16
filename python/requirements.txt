@@ -1,0 +1,13 @@
+networkx
+
+nx-arangodb
+
+langgraph
+
+langchain-core
+langchain-openai
+langchain-community
+
+mysql-connector-python
+
+python-arango
